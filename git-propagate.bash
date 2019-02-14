@@ -41,7 +41,7 @@ unset LANG
 # construct branches
 branches="${branches_literal}"
 
-#get remote repositories
+# get remote repositories
 repositories="$(git remote | sort -u)"
 
 # iterate over repositories and branches and do the pushing
