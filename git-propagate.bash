@@ -46,7 +46,7 @@ if [[ ! -z "${branches_pattern}" ]] ; then
 fi
 
 # construct $branches
-branches="${branches_literal} ${branches_literal}"
+branches="${branches_literal} ${branches_matching}"
 
 # get remote repositories
 repositories="$(git remote | sort -u)"
