@@ -5,7 +5,7 @@
 # Example:	git-propagate.bash
 # Responsible:	Stephan Rosenke <r01-571@r0s.de>
 # License:	CC BY-SA 4.0
-# Version:	2015-05-05
+# Version:	2019-02-14
 # Based on:	n/a
 
 ################################################################################
