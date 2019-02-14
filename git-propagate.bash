@@ -12,6 +12,7 @@
 # set some user serviceable vars                                               #
 ################################################################################
 branches_literal="master"
+branches_pattern=""
 
 ################################################################################
 ################################################################################
@@ -22,6 +23,7 @@ branches_literal="master"
 ################################################################################
 # set some non-user serviceable vars                                           #
 ################################################################################
+branches_matching=""
 
 # unset LANG if you parse stdout-put of your commands for preventing problems
 # with unanticipated languages
@@ -38,8 +40,13 @@ unset LANG
 ################################################################################
 ################################################################################
 
-# construct branches
-branches="${branches_literal}"
+# use $branches_pattern for getting $branches_matching
+if [[ ! -z "${branches_pattern}" ]] ; then
+ branches_matching="$(git branch | egrep ${branches_pattern})"
+fi
+
+# construct $branches
+branches="${branches_literal} ${branches_literal}"
 
 # get remote repositories
 repositories="$(git remote | sort -u)"
