@@ -5,7 +5,7 @@
 # Example:	git-propagate.bash
 # Responsible:	Stephan Rosenke <r01-571@r0s.de>
 # License:	CC BY-SA 4.0
-# Version:	2019-02-14
+# Version:	2020-12-30
 # Based on:	n/a
 
 ################################################################################
@@ -42,7 +42,7 @@ unset LANG
 
 # use $branches_pattern for getting $branches_matching
 if [[ ! -z "${branches_pattern}" ]] ; then
- branches_matching="$(git branch | egrep ${branches_pattern})"
+ branches_matching="$(git branch | cut -c 3- | egrep ${branches_pattern})"
 fi
 
 # construct $branches
