@@ -5,14 +5,14 @@
 # Example:	git-propagate.bash
 # Responsible:	Stephan Rosenke <r01-571@r0s.de>
 # License:	CC BY-SA 4.0
-# Version:	2020-12-30
+# Version:	2023-10-19
 # Based on:	n/a
 
 ################################################################################
 # set some user serviceable vars                                               #
 ################################################################################
-branches_literal="master"
-branches_pattern=""
+branches_literal=""
+branches_pattern="(main|master)"
 
 ################################################################################
 ################################################################################
